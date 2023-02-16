@@ -2,6 +2,7 @@ import { useState,useEffect } from 'react'
 // import reactLogo from './assets/react.svg'
 import './App.css'
 import Axios from 'axios'
+import { Weather } from './Weather';
 
 function App() {
   const WeatherAPI = '886705b4c1182eb1c69f28eb8c520e20';
@@ -34,7 +35,10 @@ function App() {
 
   return (
     <div className="App">
-     <h2>Weather App</h2>
+      
+
+      <Weather handleSubmit={handleSubmit} weatherData={weatherData} weatherDescription={weatherDescription}/>
+     {/* <h2>Weather App</h2>
      <div>
       <input placeholder='city' onKeyDown={handleSubmit}/>
       <div className='weather-data'>
@@ -52,7 +56,7 @@ function App() {
         </div>: <h2>Not found!</h2>}
       </div>
       
-     </div>
+     </div> */}
     </div>
   )
 }
