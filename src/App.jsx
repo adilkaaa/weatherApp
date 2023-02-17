@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react'
 // import reactLogo from './assets/react.svg'
 import './App.css'
 import Axios from 'axios'
-import { Weather } from './Weather';
+import { Weather } from './components/Weather';
 
 function App() {
   const WeatherAPI = '886705b4c1182eb1c69f28eb8c520e20';

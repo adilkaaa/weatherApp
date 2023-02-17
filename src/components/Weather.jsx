@@ -3,10 +3,14 @@ export const Weather =(props)=>{
 
     <div className="section">
         <div className="container2">
+            <div className="title">
+                <p>Weather App</p>
+            </div>
             <div className="">
                 <input className='input-city' placeholder="Type city" onKeyDown={props?.handleSubmit}/>
             </div>
         </div>
+
         {/* <div className="container"> */}
         {props?.weatherData ? 
         <div className="container">
@@ -18,9 +22,9 @@ export const Weather =(props)=>{
                     <p className="description-text">{props?.weatherDescription?.description}</p>
                 </div>
             </div>
-            <div className="box image"><img src="images/clouds.png" alt="photo"/></div>
+            {/* <div className="box image"><img src="images/clouds.png" alt="photo"/></div> */}
             <div className="box degrees">
-                <p>{<p>{props?.weatherData?.main?.feels_like} <span>&#8451;</span></p>}</p>
+                <p>{props?.weatherData && <p>{props?.weatherData?.main?.feels_like} <span>&#8451;</span></p>}</p>
             </div>
             <div className="box footer">
                 <div className="extra-info">
@@ -28,7 +32,12 @@ export const Weather =(props)=>{
                     <p>Speed: {props?.weatherData?.wind?.speed} m/s</p>
                 </div>
             </div>
-        </div> : <div className="container3">Not Found</div>}
+        </div> : <div className="container3">
+            <div className="not-found-box">
+                <p>Not Found!</p></div>
+            </div>
+            }
+            
         {/* </div> */}
     </div>
     )

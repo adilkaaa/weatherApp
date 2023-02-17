@@ -1,43 +1,21 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.weather-box{
-  margin-top: 10px;
-  background-color: lightblue;
-  margin-left: 90px;
-  margin-right: 90px;
-  display: flex;
-  flex-direction: column;
+/* * {
+  margin: 0;
   
+} */
+/* .body{
+  margin: 0;
+  padding: 0;
 }
-.degrees{
-  font-size: 30px;
 
-}
- */
- .body{
-  margin: 0 0;
+#root{
+  margin: 0;
+  padding: 0;
+
+} */
+
+  body{
+  margin: 0;
+  padding: 0;
 }
 .section{
   display: grid;
@@ -47,8 +25,8 @@
 .container {
   display: grid; 
   grid-auto-columns: 1fr; 
-  grid-template-rows: 1.1fr 0.4fr 1fr 1.2fr 1.3fr; 
-  gap: 1px 1px; 
+  grid-template-rows: 1.1fr 0.4fr 1.2fr 1.3fr; 
+  /* gap: 1px 1px;  */
 }
 .box{
   background-color: lightgreen;
@@ -58,9 +36,7 @@
   padding-top: 40px;
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 32px;
-
-  /* align-items: center; */
+  font-size: 50px;
 }
 .description{
 
@@ -69,16 +45,19 @@
   
 }
 .descripion-box{
-  width: 248px;
-  height: 48px;
-  background-color: lightslategrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 60px;
+  background-color: rgb(242, 227, 230);
   border-radius: 10px;
-  text-align: center;
+  /* text-align: center; */
 
 }
 .description-text{
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
+  font-size: 26px;
 }
 .image{
   display: flex;
@@ -109,8 +88,9 @@
 .container2{
   background-color: lightskyblue;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
 }
 .container2 .input-city{
   border-radius: 12px;
@@ -127,4 +107,25 @@
   background-color: lightgreen;
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container3 p{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  
+
+}
+.container3 .not-found-box{
+  display: flex;
+  align-items: center;
+  border-radius: 9px;
+  background-color: azure;
+  height: 60px;
+  
+  /* width: 120px; */
+  
 }
