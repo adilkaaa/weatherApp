@@ -11,25 +11,26 @@ export const Weather =(props)=>{
             </div>
         </div>
 
-        {/* <div className="container"> */}
+        
         {props?.weatherData ? 
         <div className="container">
             <div className="box title">
                 <p>{props?.weatherData?.name}</p> 
             </div>
             <div className="box description">
+                {props?.weatherData.cod &&
                 <div className="descripion-box">
                     <p className="description-text">{props?.weatherDescription?.description}</p>
-                </div>
+                </div>}
             </div>
-            {/* <div className="box image"><img src="images/clouds.png" alt="photo"/></div> */}
+            
             <div className="box degrees">
-                <p>{props?.weatherData && <p>{props?.weatherData?.main?.feels_like} <span>&#8451;</span></p>}</p>
+                <p>{props?.weatherData?.cod&& <p>{props?.weatherData?.main?.feels_like} <span>&#8451;</span></p>}</p>
             </div>
             <div className="box footer">
                 <div className="extra-info">
-                    <p>Humidity: {props?.weatherData?.main?.humidity}</p>
-                    <p>Speed: {props?.weatherData?.wind?.speed} m/s</p>
+                    {props?.weatherData.cod && <p>Humidity: {props?.weatherData?.main?.humidity}</p>}
+                    {props?.weatherData.cod && <p>Speed: {props?.weatherData?.wind?.speed} m/s</p>}
                 </div>
             </div>
         </div> : <div className="container3">
@@ -38,7 +39,7 @@ export const Weather =(props)=>{
             </div>
             }
             
-        {/* </div> */}
+        
     </div>
     )
 }

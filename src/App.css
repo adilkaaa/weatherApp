@@ -27,6 +27,7 @@
   grid-auto-columns: 1fr; 
   grid-template-rows: 1.1fr 0.4fr 1.2fr 1.3fr; 
   /* gap: 1px 1px;  */
+  height: 100vh;
 }
 .box{
   background-color: lightgreen;
@@ -50,7 +51,7 @@
   align-items: center;
   width: 260px;
   height: 60px;
-  background-color: rgb(242, 227, 230);
+  background-color: rgb(249, 248, 248);
   border-radius: 10px;
   /* text-align: center; */
 
@@ -58,6 +59,7 @@
 .description-text{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 26px;
+  color: rgb(0, 0, 0);
 }
 .image{
   display: flex;
